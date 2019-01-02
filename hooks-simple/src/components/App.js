@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ResourceList from './ResourceList';
 
 //refactored this area to use functional component with hooks instead of the usual class component!
 const App = () => {
@@ -8,9 +9,9 @@ const App = () => {
       <div>
         <div>
           <button onClick={()=> setResource('posts')}>Post</button>
-          <button onClick={() => setResource('to dos')}>To Dos</button>
+          <button onClick={() => setResource('todos')}>To Dos</button>
         </div>
-        {resource}
+        <ResourceList resource={resource} />
       </div>
     );
 }
